@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: opensslpy
+Version: 0.0.2
+Summary: run openssl via python
+Home-page: https://github.com/Madhava-mng/openssltool
+Author: Madhava-mng
+Author-email: alformint@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Madhava-mng/openssltool
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# openssltool
+
+run openssl via python
+
+**installation:**
+```bash
+$ python3 -m pip install opensslpy
+
+```
+
+**examples:**
+```python
+>>> from opensslpy import sym
+
+>>> # encryption
+>>> sym.encrypt("test.txt", out_file="file1.enc", iter=34, passwd="secret", cipher="bf")
+
+>>> # decryption
+>>> sym.decrypt("file1.enc", out_file="file1.txt", iter=34, passwd="secret", cipher="bf")
+
+>>> # list all cipher
+>>> sym.CIPHERS
+
+```
+
+
