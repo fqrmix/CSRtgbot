@@ -52,9 +52,6 @@ def handle_docs_photo(message):
         downloaded_file = bot.download_file(file_info.file_path)
         print('Checking CSR...')
 
-        print(downloaded_file)
-        print(convert(downloaded_file))
-
         if csrCheck(downloaded_file, file_info):
             req = load_certificate_request(FILETYPE_PEM, downloaded_file)
             key = req.get_pubkey()
@@ -68,6 +65,9 @@ def handle_docs_photo(message):
                                   f"Country: {str_components ['C']}\n"
                                   f"Key algorithm: {key_type}\n"
                                   f"Key size: {key.bits()}")
+        else:
+            raise Exception('Invalid CSR!')
+
     except Exception as e:
         bot.reply_to(message, e)
 
