@@ -1,7 +1,7 @@
 import pathlib
 
 # Auth
-token = 'mytoken'
+token = '5355692174:AAFsP4FuCY3Aui_qKyiRAeWHIE5ttfcc9Q8'
 
 # Some functions
 

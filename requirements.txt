@@ -1,0 +1,12 @@
+certifi==2021.10.8
+cffi==1.15.0
+charset-normalizer==2.0.12
+cryptography==37.0.0
+idna==3.3
+numpy==1.22.3
+pycparser==2.21
+pyOpenSSL==22.0.0
+PySimpleGUI==4.59.0
+pyTelegramBotAPI==4.5.1
+requests==2.27.1
+urllib3==1.26.9
