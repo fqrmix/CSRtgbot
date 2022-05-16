@@ -35,7 +35,7 @@ def send_csr_decode(message):
                                   f"Key size: {key.bits()}")
             cert_str = convert(downloaded_file)
             inline_cert_str = '`' + cert_str + '`'
-            bot.send_message(chat_id, inline_cert_str)
+            bot.send_message(chat_id, inline_cert_str, parse_mode='Markdown')
            
     except Exception as e:
         bot.reply_to(message, e)
