@@ -33,7 +33,7 @@ def send_csr_decode(message):
                                   f"Country: {str_components ['C']}\n"
                                   f"Key algorithm: {key_type}\n"
                                   f"Key size: {key.bits()}")
-            bot.reply_to(message, convert(downloaded_file).splitlines())
+            bot.send_message(chat_id, convert(downloaded_file).splitlines())
            
     except Exception as e:
         bot.reply_to(message, e)
